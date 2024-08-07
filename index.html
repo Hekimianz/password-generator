@@ -1,29 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Password generator app</title>
-</head>
-<body>
-
-  Password Generator
-
-  P4$5W0rD!
-
-  Character Length
-
-  Include Uppercase Letters
-  Include Lowercase Letters
-  Include Numbers
-  Include Symbols
-
-  Strength
-
-  Generate
-
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <title>Frontend Mentor | Password generator app</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <main>
+      <section class="main__card">
+        <h1 class="logo">Password Generator</h1>
+        <div class="password__cont">
+          <h2 class="password__text heading-m">PTx1f5DaFX</h2>
+          <img
+            src="./assets/images/icon-copy.svg"
+            alt="Copy to clipboard"
+            class="copy__icon"
+          />
+        </div>
+        <div class="filters__cont">
+          <div class="length__cont">
+            <div class="length__info">
+              <h2>Character Length</h2>
+              <span class="length__value heading-m"></span>
+            </div>
+            <input
+              type="range"
+              class="length__input"
+              min="8"
+              max="20"
+              step="1"
+              value="14"
+            />
+          </div>
+          <div class="checks__cont">
+            <div class="custom-checkbox">
+              <input type="checkbox" id="uppercase" class="checkbox" />
+              <label for="uppercase">
+                <span class="checkbox-custom"></span>
+                Include Uppercase Letters
+              </label>
+            </div>
+            <div class="custom-checkbox">
+              <input type="checkbox" id="lowercase" class="checkbox" />
+              <label for="lowercase">
+                <span class="checkbox-custom"></span>
+                Include Lowercase Letters
+              </label>
+            </div>
+            <div class="custom-checkbox">
+              <input type="checkbox" id="numbers" class="checkbox" />
+              <label for="numbers">
+                <span class="checkbox-custom"></span>
+                Include Numbers
+              </label>
+            </div>
+            <div class="custom-checkbox">
+              <input type="checkbox" id="symbols" class="checkbox" />
+              <label for="symbols">
+                <span class="checkbox-custom"></span>
+                Include Symbols
+              </label>
+            </div>
+          </div>
+          <div class="strength__cont">
+            <h2>STRENGTH</h2>
+            <div class="strength__boxes">
+              <span class="strength__amount body">MEDIUM</span>
+              <div class="strength__box firstBox"></div>
+              <div class="strength__box secondBox"></div>
+              <div class="strength__box thirdBox"></div>
+              <div class="strength__box fourthBox"></div>
+            </div>
+          </div>
+          <button class="generate__btn">
+            GENERATE
+            <img src="./assets/images/icon-arrow-right.svg" alt="arrow right" />
+          </button>
+        </div>
+      </section>
+    </main>
+  </body>
 </html>
