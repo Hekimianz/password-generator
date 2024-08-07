@@ -31,13 +31,6 @@
   font-size: var(--heading-m-font-size);
 }
 
-.heading-l {
-  font-family: var(--font-family);
-  font-weight: var(--font-weight);
-  line-height: var(--heading-l-line-height);
-  font-size: var(--heading-l-font-size);
-}
-
 .body {
   font-family: var(--font-family);
   font-weight: var(--font-weight);
@@ -109,6 +102,10 @@ h1 {
   cursor: pointer;
 }
 
+.copy__icon:hover {
+  filter: brightness(0) invert(1);
+}
+
 .length__cont {
   display: flex;
   flex-direction: column;
@@ -147,6 +144,11 @@ input[type="range"]::-webkit-slider-thumb {
   transition: 0.2s ease-in-out;
 }
 
+input[type="range"]::-webkit-slider-thumb:active {
+  background-color: var(--very-dark-grey);
+  border: 2px solid var(--neon-green);
+}
+
 /* Thumb: Firefox */
 input[type="range"]::-moz-range-thumb {
   height: 28px;
@@ -155,6 +157,11 @@ input[type="range"]::-moz-range-thumb {
   border-radius: 50%;
   border: none;
   transition: 0.2s ease-in-out;
+}
+
+input[type="range"]::-moz-range-thumb:active {
+  background-color: var(--very-dark-grey);
+  border: 2px solid var(--neon-green);
 }
 
 .checks__cont {
@@ -180,6 +187,11 @@ input[type="range"]::-moz-range-thumb {
   background-color: transparent;
   vertical-align: middle;
   position: relative;
+  cursor: pointer;
+}
+
+.checkbox-custom:hover {
+  border: 2px solid var(--neon-green);
 }
 
 .checkbox-custom::after {
@@ -257,4 +269,115 @@ input[type="range"]::-moz-range-thumb {
   align-items: center;
   justify-content: center;
   gap: 1.6rem;
+}
+
+.generate__btn:hover {
+  color: var(--neon-green);
+  border: 2px solid var(--neon-green);
+  background-color: transparent;
+}
+
+.generate__btn:hover svg path {
+  fill: var(--neon-green);
+}
+
+@media screen and (min-width: 768px) {
+  .heading-l {
+    font-family: var(--font-family);
+    font-weight: var(--font-weight);
+    line-height: var(--heading-l-line-height);
+    font-size: var(--heading-l-font-size);
+  }
+
+  main {
+    padding: 13.3rem 11.4rem;
+  }
+
+  .main__card {
+    gap: 3.1rem;
+  }
+
+  .logo {
+    font-size: 2.4rem;
+  }
+
+  .copy__icon {
+    width: 2.1rem;
+    height: 2.4rem;
+    transition: 0.2s all;
+  }
+
+  .filters__cont {
+    margin-top: -7px;
+    padding: 2.4rem 3.2rem;
+  }
+
+  .length__cont {
+    gap: 3.2rem;
+  }
+
+  .length__info h2 {
+    font-family: var(--font-family);
+    font-weight: var(--font-weight);
+    line-height: var(--body-line-height);
+    font-size: var(--body-font-size);
+  }
+
+  .checks__cont {
+    font-family: var(--font-family);
+    font-weight: var(--font-weight);
+    line-height: var(--body-line-height);
+    font-size: var(--body-font-size);
+  }
+
+  .strength__cont h2 {
+    font-family: var(--font-family);
+    font-weight: var(--font-weight);
+    line-height: var(--body-line-height);
+    font-size: var(--body-font-size);
+  }
+
+  .strength__amount {
+    font-family: var(--font-family);
+    font-weight: var(--font-weight);
+    line-height: var(--heading-m-line-height);
+    font-size: var(--heading-m-font-size);
+    margin-right: 15.5px;
+  }
+
+  .strength__cont {
+    padding: 2.5rem 3.2rem;
+  }
+
+  .generate__btn {
+    font-family: var(--font-family);
+    font-weight: var(--font-weight);
+    line-height: var(--body-line-height);
+    font-size: var(--body-font-size);
+    gap: 2.4rem;
+  }
+}
+
+@media screen and (min-width: 1044px) {
+  main {
+    padding: 13.3rem 45rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .main__card {
+    width: 540px;
+  }
+
+  .logo {
+    font-family: var(--font-family);
+    font-weight: var(--font-weight);
+    line-height: var(--heading-m-line-height);
+    font-size: var(--heading-m-font-size);
+  }
+
+  .length__cont {
+    gap: 1.6rem;
+  }
 }
