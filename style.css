@@ -96,10 +96,27 @@ h1 {
   justify-content: space-between;
 }
 
+.password__cont {
+  position: relative;
+}
+
 .copy__icon {
   width: 17.5px;
   height: 20px;
   cursor: pointer;
+  position: relative;
+  transition: 0.2s all;
+}
+
+.copied__text {
+  color: var(--neon-green);
+  position: absolute;
+  right: 6rem;
+}
+
+.hidden {
+  opacity: 0;
+  transition: 0.2s all;
 }
 
 .copy__icon:hover {
@@ -246,13 +263,6 @@ input[type="range"]::-moz-range-thumb:active {
 
 .strength__amount {
   margin-right: 1.6rem;
-}
-
-.firstBox,
-.secondBox,
-.thirdBox {
-  background-color: var(--yellow);
-  border: none;
 }
 
 .generate__btn {
